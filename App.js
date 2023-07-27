@@ -10,7 +10,7 @@ import {
 import { useFonts } from "expo-font";
 
 import BackGroundImage from "./src/components/BackGroundImage";
-import SigInForm from "./src/components/SignInForm";
+import RegistrationScreen from "./src/components/RegistrationScreen";
 
 import BackGround from "./src/assets/images/background.png";
 
@@ -28,9 +28,9 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<BackGroundImage source={BackGround}>
-			{/* <View style={styles.form}> */}
-				<SigInForm />
-			{/* </View> */}
+				{/* <View style={styles.form}> */}
+				<RegistrationScreen />
+				{/* </View> */}
 			</BackGroundImage>
 			<StatusBar style="auto" />
 		</View>
