@@ -9,10 +9,8 @@ import {
 
 import { useFonts } from "expo-font";
 
-import BackGroundImage from "./src/components/BackGroundImage";
 import RegistrationScreen from "./src/components/RegistrationScreen";
-
-import BackGround from "./src/assets/images/background.png";
+import LoginScreen from "./src/components/LoginScreen"
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
@@ -27,11 +25,10 @@ export default function App() {
 
 	return (
 		<View style={styles.container}>
-			<BackGroundImage source={BackGround}>
-				{/* <View style={styles.form}> */}
-				<RegistrationScreen />
-				{/* </View> */}
-			</BackGroundImage>
+			{/* <View style={styles.form}> */}
+			<LoginScreen />
+			{/* </View> */}
+
 			<StatusBar style="auto" />
 		</View>
 	);

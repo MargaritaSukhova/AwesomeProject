@@ -2,7 +2,6 @@ import { Pressable, Text, StyleSheet } from "react-native";
 
 export default function ShowPasswordButton({ title }) {
   return (
-   
 		<Pressable style={styles.button} onPress={() => alert("Show password")}>
 			<Text style={styles.title}>{title}</Text>
 		</Pressable>

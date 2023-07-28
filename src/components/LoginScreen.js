@@ -16,7 +16,7 @@ import Link from "./Link";
 
 import BackGround from "../assets/images/background.png";
 
-export default function RegistrationScreen() {
+export default function LoginScreen() {
 	return (
 		<TouchableWithoutFeedback onPress={Keyboard.dismiss}>
 			<View style={styles.container}>
@@ -27,21 +27,22 @@ export default function RegistrationScreen() {
 						style={styles.formContainer}
 					>
 						<View style={styles.inner}>
-							<Avatar />
 							<View style={styles.headerContainer}>
-								<Header title="Реєстрація"></Header>
+								<Header title="Увійти"></Header>
 							</View>
 							<View style={styles.inputContainer}>
-								<Input value="login" placeholder="Логін" />
 								<Input value="email" placeholder="Адреса електронної пошти" />
 								<View value="password" style={styles.passwordContainer}>
-									<Input placeholder="Пароль" secureTextEntry="true" />
+									<Input placeholder="Пароль" secureTextEntry />
 									<ShowPasswordButton title="Показати" />
 								</View>
 							</View>
 							<View style={styles.btnContainer}>
-								<Button title="Зареєстуватися" />
-								<Link title="Вже є акаунт? Увійти" />
+								<Button title="Увійти" />
+								<Link
+									title="Немає акаунту? "
+									underlinedTitle="Зареєструватися"
+								/>
 							</View>
 						</View>
 					</KeyboardAvoidingView>
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "#fff",
 	},
 	formContainer: {
-		marginTop: 263,
+		marginTop: 295,
 		flex: 1,
 		backgroundColor: "#fff",
 		borderTopLeftRadius: 25,
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
 		marginBottom: 33,
 	},
 	inputContainer: {
-		gap: 13,
+		gap: 16,
 		marginBottom: 43,
 	},
 	passwordContainer: {
@@ -81,6 +82,6 @@ const styles = StyleSheet.create({
 		flexDirection: "row",
 	},
 	btnContainer: {
-		marginBottom: 50,
+		marginBottom: 128,
 	},
 });
